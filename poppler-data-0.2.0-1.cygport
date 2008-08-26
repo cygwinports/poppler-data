@@ -1,0 +1,12 @@
+DESCRIPTION="PDF rendering library (data)"
+HOMEPAGE="http://poppler.freedesktop.org/"
+SRC_URI="http://poppler.freedesktop.org/${P}.tar.gz"
+
+PKG_HINTS="data"
+
+src_compile() { :; }
+
+src_install() {
+	cd ${S}
+	cyginstall prefix=/usr
+}
