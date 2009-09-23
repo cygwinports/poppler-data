@@ -7,4 +7,5 @@ src_compile() { :; }
 src_install() {
 	cd ${S}
 	cyginstall prefix=/usr
+	dodoc COPYING.*
 }
