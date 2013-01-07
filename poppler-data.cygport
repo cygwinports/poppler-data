@@ -1,0 +1,19 @@
+NAME="poppler-data"
+VERSION=0.4.6
+RELEASE=1
+CATEGORY="Graphics Text"
+SUMMARY="PDF rendering library (encoding data)"
+DESCRIPTION="Poppler is a fork of the xpdf PDF viewer which provides PDF
+rendering functionality as a shared library and replaces built-in code
+with dependencies that are now available as standard components of modern
+Unix desktop environments."
+HOMEPAGE="http://poppler.freedesktop.org/"
+SRC_URI="http://poppler.freedesktop.org/${P}.tar.gz"
+
+src_compile() { :; }
+
+src_install() {
+	cd ${S}
+	cyginstall prefix=/usr
+	dodoc COPYING.*
+}
