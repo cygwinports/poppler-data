@@ -10,6 +10,8 @@ Unix desktop environments."
 HOMEPAGE="http://poppler.freedesktop.org/"
 SRC_URI="http://poppler.freedesktop.org/${P}.tar.gz"
 
+ARCH=noarch
+
 src_compile() { :; }
 
 src_install() {
