@@ -1,5 +1,5 @@
 NAME="poppler-data"
-VERSION=0.4.6
+VERSION=0.4.7
 RELEASE=1
 CATEGORY="Graphics Text"
 SUMMARY="PDF rendering library (encoding data)"
@@ -8,9 +8,15 @@ rendering functionality as a shared library and replaces built-in code
 with dependencies that are now available as standard components of modern
 Unix desktop environments."
 HOMEPAGE="http://poppler.freedesktop.org/"
-SRC_URI="http://poppler.freedesktop.org/${P}.tar.gz"
+SRC_URI="http://poppler.freedesktop.org/${NAME}-${VERSION}.tar.gz"
 
 ARCH=noarch
+
+PKG_NAMES="${NAME} ${NAME}-devel"
+poppler_data_CONTENTS="usr/share/doc/ usr/share/poppler/"
+poppler_data_devel_REQUIRES=${NAME}
+poppler_data_devel_CONTENTS="usr/share/pkgconfig/${NAME}.pc"
+DIFF_EXCLUDES="*.pc"
 
 src_compile() { :; }
 
